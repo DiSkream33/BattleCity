@@ -1,0 +1,10 @@
+^D:\REPOSITORY\BATTLECITY\BUILD1\CMAKEFILES\EBB49A71624A8F84A1B16D60BE64FA07\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/repository/BattleCity -BD:/repository/BattleCity/build1 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/repository/BattleCity/build1/BattleCity.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
